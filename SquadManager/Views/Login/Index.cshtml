@@ -1,15 +1,19 @@
 ﻿@model SquadManager.Models.UserViewModel;
 
+    <link href="~/css/login.css" rel="stylesheet" />
+
     <section>
         <h1>Autenticação</h1>
 
-        <input type="text" placeholder="Username / email" name="email" value="" />
-        <input type="text" name="password" placeholder="Password" />
-        <a href="#">Esqueceu a senha?</a>
+        <form action="/Login/Test" method="post">
+            <input type="text" placeholder="Username / email" name="email" value="@Model.Email" />
+            <input type="text" name="password" placeholder="Password" value="@Model.Password"/>
+            <a href="#">Esqueceu a senha?</a>
 
-        <button>Login</button>
+            <button type="submit">Login</button>
 
-        <label>Não tem conta?</label>
-        <a href="#">Crie aqui</a>
+            <label>Não tem conta?<a href="#">Crie aqui</a></label>
+        </form>
+        
     </section>
 
